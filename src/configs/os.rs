@@ -22,16 +22,21 @@ impl<'a> OSConfig<'a> {
     }
 }
 
-impl<'a> Default for OSConfig<'a> {
+impl Default for OSConfig<'_> {
     fn default() -> Self {
         OSConfig {
             format: "[$symbol]($style)",
             style: "bold white",
             symbols: indexmap! {
+                Type::AIX => "➿ ",
+                Type::Alpaquita => "🔔 ",
+                Type::AlmaLinux => "💠 ",
                 Type::Alpine => "🏔️ ",
                 Type::Amazon => "🙂 ",
                 Type::Android => "🤖 ",
                 Type::Arch => "🎗️ ",
+                Type::Artix => "🎗️ ",
+                Type::CachyOS => "🎗️ ",
                 Type::CentOS => "💠 ",
                 Type::Debian => "🌀 ",
                 Type::DragonFly => "🐉 ",
@@ -43,7 +48,9 @@ impl<'a> Default for OSConfig<'a> {
                 Type::Gentoo => "🗜️ ",
                 Type::HardenedBSD => "🛡️ ",
                 Type::Illumos => "🐦 ",
+                Type::Kali => "🐉 ",
                 Type::Linux => "🐧 ",
+                Type::Mabox => "📦 ",
                 Type::Macos => "🍎 ",
                 Type::Manjaro => "🥭 ",
                 Type::Mariner => "🌊 ",
@@ -51,6 +58,7 @@ impl<'a> Default for OSConfig<'a> {
                 Type::Mint => "🌿 ",
                 Type::NetBSD => "🚩 ",
                 Type::NixOS => "❄️ ",
+                Type::Nobara =>  "🎩 ",
                 Type::OpenBSD => "🐡 ",
                 Type::OpenCloudOS => "☁️ ",
                 Type::openEuler => "🦉 ",
@@ -60,11 +68,15 @@ impl<'a> Default for OSConfig<'a> {
                 Type::Raspbian => "🍓 ",
                 Type::Redhat => "🎩 ",
                 Type::RedHatEnterprise => "🎩 ",
+                Type::RockyLinux => "💠 ",
                 Type::Redox => "🧪 ",
                 Type::Solus => "⛵ ",
                 Type::SUSE => "🦎 ",
                 Type::Ubuntu => "🎯 ",
+                Type::Ultramarine => "🔷 ",
                 Type::Unknown => "❓ ",
+                Type::Uos => "🐲 ",
+                Type::Void => "  ",
                 Type::Windows => "🪟 ",
                 // Future symbols.
                 //aosc =>       " ",
@@ -76,7 +88,6 @@ impl<'a> Default for OSConfig<'a> {
                 //mandriva =>   " ",
                 //sabayon =>    " ",
                 //slackware =>  " ",
-                //void =>       " ",
                 //solaris =>    " ",
             },
             disabled: true,
